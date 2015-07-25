@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
 	{
 		x.slice[i] = x.start + x.step * i;
 	}
-	y.span = 20;
+	y.span = 10;
 	y.start = 0.0;
 	y.end = 10.0 / 1000;
 	y.step = (y.end -  y.start) / y.span;
@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
 	{
 		y.slice[i] = y.start + y.step * i;
 	}
-	z.span = 84;
+	z.span = 10;
 	z.start = 0.0;
 	z.end = 10.5 / 1000;
 	z.step = (z.end -  z.start) / z.span;
