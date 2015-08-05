@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
 	x.start = 0.0;
 	x.end = 6.0 / 1000;
 	x.step = (x.end -  x.start) / x.span;
-	x.slice = (double *) malloc(x.span * sizeof(double));
+	x.slice = (double *) malloc((1 + x.span) * sizeof(double));
 	for(i = 0; i < 1 + x.span; i++)
 	{
 		x.slice[i] = x.start + x.step * i;
@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
 	y.start = 0.0;
 	y.end = 10.0 / 1000;
 	y.step = (y.end -  y.start) / y.span;
-	y.slice = (double *) malloc(y.span * sizeof(double));
+	y.slice = (double *) malloc((1 + y.span) * sizeof(double));
 	for(i = 0; i < 1 + y.span; i++)
 	{
 		y.slice[i] = y.start + y.step * i;
@@ -34,7 +34,7 @@ int main(int argc, char const *argv[])
 	z.start = 0.0;
 	z.end = 10.5 / 1000;
 	z.step = (z.end -  z.start) / z.span;
-	z.slice = (double *) malloc(z.span * sizeof(double));
+	z.slice = (double *) malloc((1 + z.span) * sizeof(double));
 	for(i = 0; i < 1 + z.span; i ++)
 	{
 		z.slice[i] = z.start + z.step * i;
@@ -371,5 +371,6 @@ int main(int argc, char const *argv[])
 	stop = clock();
 	duration = ((double) (stop - start)) / (CLOCKS_PER_SEC);
 	printf("duration = %e sec\n", duration);
+	getchar();
 	return 0;
 }
