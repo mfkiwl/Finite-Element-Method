@@ -21,16 +21,16 @@ int main(int argc, char const *argv[])
 	{
 		x.slice[i] = x.start + x.step * i;
 	}
-	y.span = 10;
+	y.span = 20;
 	y.start = 0.0;
 	y.end = 10.0 / 1000;
-	y.step = (y.end -  y.start) / y.span;
+	y.step = (y.end - y.start) / y.span;
 	y.slice = (double *) malloc((1 + y.span) * sizeof(double));
 	for(i = 0; i < 1 + y.span; i++)
 	{
 		y.slice[i] = y.start + y.step * i;
 	}
-	z.span = 10;
+	z.span = 84;
 	z.start = 0.0;
 	z.end = 10.5 / 1000;
 	z.step = (z.end -  z.start) / z.span;
@@ -360,8 +360,6 @@ int main(int argc, char const *argv[])
 		free(LU[i]);
 		LU[i] = NULL;
 	}
-	free(K);
-	K = NULL;
 	free(K);
 	K = NULL;
 	free(LU);
