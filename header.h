@@ -1,4 +1,5 @@
-typedef struct 
+#pragma once
+typedef struct
 {
 	int span;
 	double start;
