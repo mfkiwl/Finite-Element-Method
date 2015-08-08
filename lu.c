@@ -33,5 +33,3 @@ void lu(int rank, double ** A, double ** LU)
 		}
 	}
 }
-
-// void LU(int rank, double ** A, double ** LU)
