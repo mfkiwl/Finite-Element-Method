@@ -47,11 +47,7 @@ typedef struct
 	double ** differential; // 3 x 8
 } ShapeFunction;
 
-void transponse(int row, int column, double ** m, double ** n);
-
 double determinant(int rank, double ** m);
-
-void multiply(int p, int q, int r, double ** m, double ** n, double ** l);
 
 void inverse(int rank, double ** m, double ** n);
 
