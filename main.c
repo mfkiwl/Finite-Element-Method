@@ -368,7 +368,7 @@ int main(int argc, char const *argv[])
 	F = NULL;
 	stop = clock();
 	duration = ((double) (stop - start)) / (CLOCKS_PER_SEC);
-	printf("duration = %e sec\n", duration);
+	printf("duration = %e sec\nEnter any key to exit...\n", duration);
 	getchar();
 	return 0;
 }
